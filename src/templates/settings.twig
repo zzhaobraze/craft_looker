@@ -1,0 +1,71 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * looker plugin for Craft CMS 3.x
+ *
+ * looker Settings.twig
+ *
+ * @author    Zeyuan Zhao
+ * @copyright Copyright (c) 2019 Zeyuan Zhao
+ * @link      https://www.braze.com
+ * @package   Looker
+ * @since     1
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+<p><b>Looker embed Api Secret is stored as an environment variable.</b></p>
+
+{{ forms.textField({
+    label: 'Looker Embed Path',
+    instructions: 'Looker Embed Path ie /embed/dashboards',
+    id: 'embedpath',
+    name: 'embedpath',
+    value: settings['embedpath']
+    })
+}}
+{{ forms.textField({
+    label: 'Looker host',
+    instructions: 'Looker Host ie brazepartner.looker.com',
+    id: 'secret',
+    name: 'host',
+    value: settings['host']
+    })
+}}
+
+{{ forms.textField({
+    label: 'Embed DB UserID',
+    instructions: 'Embedded DB User ID',
+    id: 'dbuserid',
+    name: 'dbuserid',
+    value: settings['dbuserid']
+    })
+}}
+
+{{ forms.textField({
+    label: 'Embed User First Name',
+    instructions: 'Embedded User First Name',
+    id: 'firstname',
+    name: 'firstname',
+    value: settings['firstname']
+    })
+}}
+
+{{ forms.textField({
+    label: 'Embed User Last Name',
+    instructions: 'Embedded User Last Name',
+    id: 'lastname',
+    name: 'lastname',
+    value: settings['lastname']
+    })
+}}
+
+{{ forms.textField({
+    label: 'Embed User Group Name',
+    instructions: 'Embedded User Group Name',
+    id: 'groupname',
+    name: 'groupname',
+    value: settings['groupname']
+    })
+}}

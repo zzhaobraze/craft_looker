@@ -1,0 +1,36 @@
+{
+    "name": "braze/looker",
+    "description": "Braze Looker url plugin",
+    "type": "craft-plugin",
+    "version": "1",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "looker"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Zeyuan Zhao",
+            "homepage": "https://www.braze.com"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+          "braze\\looker\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Braze Looker",
+        "handle": "looker",
+        "schemaVersion": "1.0.0",
+        "hasCpSettings": true,
+        "hasCpSection": false,
+        "class": "braze\\looker\\Looker"
+    }
+}
