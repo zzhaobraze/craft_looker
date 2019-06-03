@@ -34,7 +34,7 @@ class LookerVariable
     {
         $settings = Looker::$plugin->getSettings();
 
-        $secret = $settings->secret ;
+        $secret = $settings->lookersecret ;
         $host = $settings->host ;
         $path = $settings->path($dashboardid, $dashboardparams);
 

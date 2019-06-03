@@ -33,6 +33,11 @@ class Settings extends Model
     /**
      * @var string|null
      */
+    public $lookersecret = null;
+    
+    /**
+     * @var string|null
+     */
     public $embedpath = null;
 
     /**

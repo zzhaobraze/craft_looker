@@ -16,7 +16,14 @@
 {% import "_includes/forms" as forms %}
 
 <p><b>Looker embed Api Secret is stored as an environment variable.</b></p>
-
+{{ forms.textField({
+    label: 'Looker Embed Secret',
+    instructions: 'Looker Embed Secret Key',
+    id: 'lookersecret',
+    name: 'lookersecret',
+    value: settings['lookersecret']
+    })
+}}
 {{ forms.textField({
     label: 'Looker Embed Path',
     instructions: 'Looker Embed Path ie /embed/dashboards',
