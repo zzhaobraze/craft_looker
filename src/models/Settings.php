@@ -34,7 +34,7 @@ class Settings extends Model
      * @var string|null
      */
     public $lookersecret = null;
-    
+
     /**
      * @var string|null
      */
@@ -69,7 +69,7 @@ class Settings extends Model
       if (!empty($dashboardparams)) {
         $dashboardparams = $dashboardparams . '&';
       }
-      return  "/login/embed/" . urlencode($this->embedpath . $dashboardid .  "?" . $dashboardparams . "embed_domain=" . Craft::$app->request->getHostInfo());
+      return  "/login/embed/" . urlencode($this->embedpath . $dashboardid .  "?" . $dashboardparams . "embed_domain=" . str_replace("http:","https:", Craft::$app->request->getHostInfo()) );
     }
 
 }
