@@ -69,7 +69,11 @@ class Settings extends Model
       if (!empty($dashboardparams)) {
         $dashboardparams = $dashboardparams . '&';
       }
-      return  "/login/embed/" . urlencode($this->embedpath . $dashboardid .  "?" . $dashboardparams . "embed_domain=" . str_replace("http:","https:", Craft::$app->request->getHostInfo()) );
+      $embed_path = Craft::$app->request->getHostInfo();
+      if (Craft::$app->request->getIsSecureConnection()) {
+          $embed_path = str_replace("http:","https:", $embed_path);
+      }
+      return  "/login/embed/" . urlencode($this->embedpath . $dashboardid .  "?" . $dashboardparams . "embed_domain=" . $embed_path);
     }
 
 }
